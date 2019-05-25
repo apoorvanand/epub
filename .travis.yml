@@ -2,7 +2,7 @@ matrix:
   include:
   - name: Android Build
     language: android
-    jdk: openjdk8
+    jdk: openjdk12
     android:
       components:
         - build-tools-28.0.3
