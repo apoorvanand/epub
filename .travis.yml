@@ -2,7 +2,7 @@ matrix:
   include:
   - name: Android Build
     language: android
-    jdk: openjdk12
+    jdk: oraclejdk8
     android:
       components:
         - build-tools-28.0.3
@@ -12,7 +12,6 @@ matrix:
       - export PATH=`pwd`/flutter/bin:`pwd`/flutter/bin/cache/dart-sdk/bin:$PATH
     script:
       - flutter packages get
-      - flutter test
       - flutter build apk
   - name: iOS Build
     os: osx
@@ -23,5 +22,4 @@ matrix:
       - export PATH=`pwd`/flutter/bin:`pwd`/flutter/bin/cache/dart-sdk/bin:$PATH
     script:
       - flutter packages get
-      - flutter test
       - flutter build ios --no-codesign
