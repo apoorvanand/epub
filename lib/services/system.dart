@@ -99,7 +99,7 @@ class SystemService {
 
   /// Get iOs permission status
   Future<PermissionStatus> getPermissionStatus(Permission permission) =>
-      SimplePermissions.getPermissionStatus(permission);
+      await SimplePermissions.getPermissionStatus(permission);
 
   FileService _fileService;
 
